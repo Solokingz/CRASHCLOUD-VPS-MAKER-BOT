@@ -26,7 +26,7 @@ intents.message_content = False
 bot = commands.Bot(command_prefix='/', intents=intents)
 client = docker.from_env()
 
-whitelist_ids = {"1128161197766746213"}  # Replace with actual user IDs
+whitelist_ids = {"925248312024641577"}  # Replace with actual user IDs
 
 # Utility Functions
 def add_to_database(userid, container_name, ssh_command):
@@ -84,7 +84,7 @@ async def capture_ssh_session_line(process):
 user_credits = {}
 
 # Cuty.io API key (Your account key)
-API_KEY = 'ebe681f9e37ef61fcfd756396'
+API_KEY = '32804beeb903fb2bd833aa19f'
 
 # Slash command: earnCredit
 @bot.tree.command(name="earncredit", description="Generate a URL to shorten and earn credits.")
@@ -93,7 +93,7 @@ async def earncredit(interaction: discord.Interaction):
     user_id = interaction.user.id
 
     # Define a default URL to shorten
-    default_url = "https://cuty.io/e58WUzLMmE3S"  # Change this as needed
+    default_url = "https://cuty.io/vpscredit"  # Change this as needed
 
     # Make a request to Cuty.io API to shorten the default URL
     api_url = f"https://cutt.ly/api/api.php?key={API_KEY}&short={default_url}"
